@@ -122,12 +122,12 @@ export async function showSetupScreens(root: Root, permissionMode: PermissionMod
     });
   }
 
-  // Always show the trust dialog in interactive sessions, regardless of permission mode.
-  // The trust dialog is the workspace trust boundary — it warns about untrusted repos
-  // and checks CLAUDE.md external includes. bypassPermissions mode
-  // only affects tool execution permissions, not workspace trust.
-  // Note: non-interactive sessions (CI/CD with -p) never reach showSetupScreens at all.
-  // Skip permission checks in claubbit
+  // 在交互式会话中始终显示信任对话框，无论权限模式如何。
+  // 信任对话框是工作区信任边界 - 它警告不受信任的仓库
+  // 并检查 CLAUDE.md 外部包含。bypassPermissions 模式
+  // 仅影响工具执行权限，不影响工作区信任。
+  // 注意：非交互式会话（CI/CD 与 -p）永远不会到达 showSetupScreens。
+  // 在 claubbit 中跳过权限检查
   if (!isEnvTruthy(process.env.CLAUBBIT)) {
     // Fast-path: skip TrustDialog import+render when CWD is already trusted.
     // If it returns true, the TrustDialog would auto-resolve regardless of
@@ -177,10 +177,10 @@ export async function showSetupScreens(root: Root, permissionMode: PermissionMod
     updateDeepLinkTerminalPreference();
   }
 
-  // Apply full environment variables after trust dialog is accepted OR in bypass mode
-  // In bypass mode (CI/CD, automation), we trust the environment so apply all variables
-  // In normal mode, this happens after the trust dialog is accepted
-  // This includes potentially dangerous environment variables from untrusted sources
+  // 在信任对话框被接受后或在绕过模式下应用完整的环境变量
+  // 在绕过模式（CI/CD，自动化）下，我们信任环境，因此应用所有变量
+  // 在正常模式下，这在信任对话框被接受后发生
+  // 这包括可能来自不受信任来源的危险环境变量
   applyConfigEnvironmentVariables();
 
   // Initialize telemetry after env vars are applied so OTEL endpoint env vars and
@@ -200,9 +200,9 @@ export async function showSetupScreens(root: Root, permissionMode: PermissionMod
     }
   }
 
-  // Check for custom API key
-  // On homespace, ANTHROPIC_API_KEY is preserved in process.env for child
-  // processes but ignored by Claude Code itself (see auth.ts).
+  // 检查自定义 API 密钥
+  // 在 homespace 上，ANTHROPIC_API_KEY 在 process.env 中保留供子进程使用
+  // 但被 Open Claude Code 中文汉化版 本身忽略（见 auth.ts）。
   if (process.env.ANTHROPIC_API_KEY && !isRunningOnHomespace()) {
     const customApiKeyTruncated = normalizeApiKeyForConfig(process.env.ANTHROPIC_API_KEY);
     const keyStatus = getCustomApiKeyStatus(customApiKeyTruncated);

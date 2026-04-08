@@ -2,16 +2,15 @@
  * Minimal module for firing macOS keychain reads in parallel with main.tsx
  * module evaluation, same pattern as startMdmRawRead() in settings/mdm/rawRead.ts.
  *
- * isRemoteManagedSettingsEligible() reads two separate keychain entries
- * SEQUENTIALLY via sync execSync during applySafeConfigEnvironmentVariables():
- *   1. "Claude Code-credentials" (OAuth tokens)  — ~32ms
- *   2. "Claude Code" (legacy API key)            — ~33ms
- * Sequential cost: ~65ms on every macOS startup.
+ * isRemoteManagedSettingsEligible() 通过 sync execSync 在 applySafeConfigEnvironmentVariables() 期间
+ * 顺序读取两个单独的 keychain 条目：
+ *   1. "Open Claude Code 中文汉化版-credentials"（OAuth 令牌）— ~32ms
+ *   2. "Open Claude Code 中文汉化版"（旧版 API 密钥）— ~33ms
+ * 顺序成本：每次 macOS 启动 ~65ms。
  *
- * Firing both here lets the subprocesses run in parallel with the ~65ms of
- * main.tsx imports. ensureKeychainPrefetchCompleted() is awaited alongside
- * ensureMdmSettingsLoaded() in main.tsx preAction — nearly free since the
- * subprocesses finish during import evaluation. Sync read() and
+ * 在此处同时触发可使子进程与 main.tsx 导入的 ~65ms 并行运行。
+ * ensureKeychainPrefetchCompleted() 与 main.tsx preAction 中的 ensureMdmSettingsLoaded() 一起等待 -
+ * 几乎免费，因为子进程在导入评估期间完成。sync read() 和
  * getApiKeyFromConfigOrMacOSKeychain() then hit their caches.
  *
  * Imports stay minimal: child_process + macOsKeychainHelpers.ts (NOT

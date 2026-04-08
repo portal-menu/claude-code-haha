@@ -1,13 +1,11 @@
 /**
- * Beta Session Tracing for Claude Code
+ * Open Claude Code 中文汉化版 的 Beta 会话跟踪
  *
- * This module contains beta tracing features enabled when
- * ENABLE_BETA_TRACING_DETAILED=1 and BETA_TRACING_ENDPOINT are set.
+ * 该模块包含在设置 ENABLE_BETA_TRACING_DETAILED=1 和 BETA_TRACING_ENDPOINT 时启用的 beta 跟踪功能。
  *
- * For external users, tracing is enabled in SDK/headless mode, or in
- * interactive mode when the org is allowlisted via the
- * tengu_trace_lantern GrowthBook gate.
- * For ant users, tracing is enabled in all modes.
+ * 对于外部用户，在 SDK/无头模式或交互模式下（当组织通过
+ * tengu_trace_lantern GrowthBook 门控允许列表时）启用跟踪。
+ * 对于 ant 用户，在所有模式下启用跟踪。
  *
  * Visibility Rules:
  * | Content          | External | Ant  |

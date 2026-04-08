@@ -1,7 +1,7 @@
 {
-  "name": "claude-code-local",
+  "name": "open-claude-code-chinese",
   "version": "999.0.0-local",
-  "private": true,
+  "description": "Open Claude Code 中文汉化版 - 基于泄露源码修复的本地可运行版本",
   "type": "module",
   "bin": {
     "claude-haha": "./bin/claude-haha"

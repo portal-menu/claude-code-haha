@@ -70,7 +70,7 @@ export function IdeOnboardingDialog(t0) {
   }
   let t6;
   if ($[8] !== ideName) {
-    t6 = <>{t5}<Text>Welcome to Claude Code for {ideName}</Text></>;
+    t6 = <>{t5}<Text>欢迎使用 {ideName} 的 Open Claude Code 中文汉化版</Text></>;
     $[8] = ideName;
     $[9] = t6;
   } else {
@@ -100,7 +100,7 @@ export function IdeOnboardingDialog(t0) {
   }
   let t11;
   if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
-    t11 = <Text>• Review Claude Code's changes{" "}{t10}{" "}<Text color="diffRemovedWord">-22</Text> in the comfort of your IDE</Text>;
+    t11 = <Text>• 查看 Open Claude Code 中文汉化版 的更改{" "}{t10}{" "}<Text color="diffRemovedWord">-22</Text> 在您的 IDE 中</Text>;
     $[13] = t11;
   } else {
     t11 = $[13];
@@ -131,7 +131,7 @@ export function IdeOnboardingDialog(t0) {
   }
   let t15;
   if ($[20] === Symbol.for("react.memo_cache_sentinel")) {
-    t15 = <Box paddingX={1}><Text dimColor={true} italic={true}>Press Enter to continue</Text></Box>;
+    t15 = <Box paddingX={1}><Text dimColor={true} italic={true}>按回车键继续</Text></Box>;
     $[20] = t15;
   } else {
     t15 = $[20];

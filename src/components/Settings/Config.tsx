@@ -1099,9 +1099,9 @@ export function Config({
       });
       return `Set ${key} to ${chalk.bold(value_2)}`;
     });
-    // Check for API key changes
-    // On homespace, ANTHROPIC_API_KEY is preserved in process.env for child
-    // processes but ignored by Claude Code itself (see auth.ts).
+    // 检查 API 密钥更改
+    // 在 homespace 上，ANTHROPIC_API_KEY 在 process.env 中保留供子进程使用
+    // 但被 Open Claude Code 中文汉化版 本身忽略（见 auth.ts）。
     const effectiveApiKey = isRunningOnHomespace() ? undefined : process.env.ANTHROPIC_API_KEY;
     const initialUsingCustomKey = Boolean(effectiveApiKey && initialConfig.current.customApiKeyResponses?.approved?.includes(normalizeApiKeyForConfig(effectiveApiKey)));
     const currentUsingCustomKey = Boolean(effectiveApiKey && globalConfig.customApiKeyResponses?.approved?.includes(normalizeApiKeyForConfig(effectiveApiKey)));
@@ -1743,13 +1743,13 @@ function teammateModelDisplayString(value: string | null | undefined): string {
   return modelDisplayString(value);
 }
 const THEME_LABELS: Record<string, string> = {
-  auto: 'Auto (match terminal)',
-  dark: 'Dark mode',
-  light: 'Light mode',
-  'dark-daltonized': 'Dark mode (colorblind-friendly)',
-  'light-daltonized': 'Light mode (colorblind-friendly)',
-  'dark-ansi': 'Dark mode (ANSI colors only)',
-  'light-ansi': 'Light mode (ANSI colors only)'
+  auto: '自动 (匹配终端)',
+  dark: '深色模式',
+  light: '浅色模式',
+  'dark-daltonized': '深色模式 (色盲友好)',
+  'light-daltonized': '浅色模式 (色盲友好)',
+  'dark-ansi': '深色模式 (仅 ANSI 颜色)',
+  'light-ansi': '浅色模式 (仅 ANSI 颜色)'
 };
 function NotifChannelLabel(t0) {
   const $ = _c(4);

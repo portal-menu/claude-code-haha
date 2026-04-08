@@ -1,14 +1,14 @@
 /**
- * Teammate utilities for agent swarm coordination
+ * 代理群组协调的队友工具
  *
- * These helpers identify whether this Claude Code instance is running as a
- * spawned teammate in a swarm. Teammates receive their identity via CLI
- * arguments (--agent-id, --team-name, etc.) which are stored in dynamicTeamContext.
+ * 这些工具用于识别此 Open Claude Code 中文汉化版 实例是否作为
+ * 群组中的生成队友运行。队友通过 CLI 参数（--agent-id、--team-name 等）接收其身份，
+ * 这些参数存储在 dynamicTeamContext 中。
  *
- * For in-process teammates (running in the same process), AsyncLocalStorage
- * provides isolated context per teammate, preventing concurrent overwrites.
+ * 对于进程内队友（在同一进程中运行），AsyncLocalStorage
+ * 为每个队友提供隔离的上下文，防止并发覆盖。
  *
- * Priority order for identity resolution:
+ * 身份解析优先级顺序：
  * 1. AsyncLocalStorage (in-process teammates) - via teammateContext.ts
  * 2. dynamicTeamContext (tmux teammates via CLI args)
  */

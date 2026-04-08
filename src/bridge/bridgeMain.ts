@@ -1938,13 +1938,12 @@ ${
   -h, --help                       Show this help
 ${serverOptions}
 DESCRIPTION
-  Remote Control allows you to control sessions on your local device from
-  claude.ai/code (https://claude.ai/code). Run this command in the
-  directory you want to work in, then connect from the Claude app or web.
+  远程控制允许您从 claude.ai/code (https://claude.ai/code) 控制本地设备上的会话。请在
+  您想要工作的目录中运行此命令，然后从 Claude 应用或网页连接。
 ${serverDescription}
 NOTES
-  - You must be logged in with a Claude account that has a subscription
-  - Run \`claude\` first in the directory to accept the workspace trust dialog
+  - 您必须使用具有订阅的 Claude 账户登录
+  - 请先在该目录中运行 \`claude\` 来接受工作区信任对话框
 ${serverNote}`
   // biome-ignore lint/suspicious/noConsole: intentional help output
   console.log(help)
@@ -2086,7 +2085,7 @@ export async function bridgeMain(args: string[]): Promise<void> {
   if (!checkHasTrustDialogAccepted()) {
     // biome-ignore lint/suspicious/noConsole:: intentional console output
     console.error(
-      `Error: Workspace not trusted. Please run \`claude\` in ${dir} first to review and accept the workspace trust dialog.`,
+      `错误：工作区未被信任。请先在 ${dir} 目录中运行 \`claude\` 来查看并接受工作区信任对话框。`,
     )
     // eslint-disable-next-line custom-rules/no-process-exit
     process.exit(1)
@@ -2252,11 +2251,11 @@ export async function bridgeMain(args: string[]): Promise<void> {
     })
     // biome-ignore lint/suspicious/noConsole: intentional dialog output
     console.log(
-      `\nClaude Remote Control is launching in spawn mode which lets you create new sessions in this project from Claude Code on Web or your Mobile app. Learn more here: https://code.claude.com/docs/en/remote-control\n\n` +
-        `Spawn mode for this project:\n` +
-        `  [1] same-dir \u2014 sessions share the current directory (default)\n` +
-        `  [2] worktree \u2014 each session gets an isolated git worktree\n\n` +
-        `This can be changed later or explicitly set with --spawn=same-dir or --spawn=worktree.\n`,
+      `\nClaude 远程控制正在启动，以允许您从网页版或移动应用的 Open Claude Code 中文汉化版 在此项目中创建新会话。了解更多: https://code.claude.com/docs/zh/remote-control\n\n` +
+        `此项目的启动模式:\n` +
+        `  [1] 同目录 \u2014 会话共享当前目录（默认）\n` +
+        `  [2] 工作树 \u2014 每个会话获得独立的 git 工作树\n\n` +
+        `这可以稍后更改或使用 --spawn=same-dir 或 --spawn=worktree 明确设置。\n`,
     )
     const answer = await new Promise<string>(resolve => {
       rl.question('Choose [1/2] (default: 1): ', resolve)
@@ -2830,7 +2829,7 @@ export async function runBridgeHeadless(
 
   if (!checkHasTrustDialogAccepted()) {
     throw new BridgeHeadlessPermanentError(
-      `Workspace not trusted: ${dir}. Run \`claude\` in that directory first to accept the trust dialog.`,
+      `工作区未被信任：${dir}。请先在该目录中运行 \`claude\` 来接受信任对话框。`,
     )
   }
 

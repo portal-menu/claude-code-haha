@@ -1,0 +1,61 @@
+ github仓库：
+ cd /e/Program Files/claude-code-haha/video-extractor/server
+  git init
+  git add -A
+  git commit -m "Initial commit"
+  git branch -M main
+  git remote add origin https://github.com/portal-menu/video-extractor-api.git
+  git push -u origin main
+
+
+RenderAPI 地址: https://video-extractor-api-4px3.onrender.com
+Cloudflare Workers:https://api.biezhua.com
+
+
+这是railway后端部署的参数配置：
+  你的 API 地址：                                                                                                         https://video-extractor-api-production-0ed5.up.railway.app
+                                                                                                                          可用接口：
+  - GET /health - 健康检查
+  - POST /api/parse - 视频解析（POST 请求，body 传 url）
+  - GET /api/ad/config - 获取广告配置
+  - POST /api/ad/config - 更新广告配置
+
+
+  管理后台地址：                                                                                                          https://video-extractor-api-production-0ed5.up.railway.app/admin
+
+SUB=_2A25E1XRyDeRhGedG71QU9ivPwj6IHXVnq4m6rDV8PUNbmtANLWb6kW9NUUS1uzcjOug1egWZegIb3vDUM1QgT7io
+
+https://www.xinpianchang.com/a13640125?from=webShare&channel=copyLink
+
+
+
+
+A0. 「刘小龙」酒店固装 实木整装 在 2026年4月7日下午3点16分 提交上传。 1：进行SEO优化 2：修正下载历史页面错误 3：增加分享、收藏浮动菜单 4：调整界面UI 5:修复视频保存权限问题
+
+
+
+继续使用 Render。GitHub 仓库存储配置文件‌：将应用配置、密钥等关键文件自动提交到 GitHub 仓库，服务启动时从仓库拉取恢复‌，这样是否可行呢？
+
+
+
+1:这个小程序收费吗?
+该小程序永久免费。
+
+2:为什么我解析了视频还是有水印?
+有些作者上传的视频本身就带有水印，这种暂时无法去除。
+
+3:为什么下载失败
+视频可能超过了微信规定的大小，目前微信只支持文件大小为50MB以内的视频下载。这种情况可点击小程序【复制链接】按钮，然后到浏览器中下载。安卓手机建议使用QQ浏览器，苹果手机需要下载软件documents 才能在浏览器中进行下载视频。
+
+
+4:为什么会解析失败?
+视频已经被删除、私密视频、在审核的视频都会解析失败。
+
+5:安卓手机提示下载成功找不到视频?
+个别手机保存后相册无法找到视频是因为手机厂
+商的系统逻辑问题，请到【文件管理】中查找对
+应文件，具体文件存储路劲请对照保存成功时微
+信弹出来的提示.
+
+6:视频保存失败怎么办?
+由于小程序限制，超过200M的视频，或者格式不是MP4的视频，小程序则无法下载

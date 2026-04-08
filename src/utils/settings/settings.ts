@@ -848,10 +848,10 @@ export function getSettingsWithSources(): SettingsWithSources {
 }
 
 /**
- * Get merged settings and validation errors from all sources
- * This function now uses session-level caching to avoid repeated file I/O.
- * Settings changes require Claude Code restart, so cache is valid for entire session.
- * @returns Merged settings and all validation errors encountered
+ * 从所有来源获取合并的设置和验证错误
+ * 此函数现在使用会话级缓存以避免重复的文件 I/O。
+ * 设置更改需要重启 Open Claude Code 中文汉化版，因此缓存在整个会话期间有效。
+ * @returns 合并的设置和遇到的所有验证错误
  */
 export function getSettingsWithErrors(): SettingsWithErrors {
   // Use cached result if available

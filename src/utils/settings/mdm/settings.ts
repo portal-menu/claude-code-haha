@@ -1,12 +1,11 @@
 /**
- * MDM (Mobile Device Management) profile enforcement for Claude Code managed settings.
+ * Open Claude Code 中文汉化版 管理设置的 MDM（移动设备管理）配置文件强制执行。
  *
- * Reads enterprise settings from OS-level MDM configuration:
- * - macOS: `com.anthropic.claudecode` preference domain
- *   (MDM profiles at /Library/Managed Preferences/ only — not user-writable ~/Library/Preferences/)
- * - Windows: `HKLM\SOFTWARE\Policies\ClaudeCode` (admin-only)
- *   and `HKCU\SOFTWARE\Policies\ClaudeCode` (user-writable, lowest priority)
- * - Linux: No MDM equivalent (uses /etc/claude-code/managed-settings.json instead)
+ * 从操作系统级别的 MDM 配置读取企业设置：
+ * - macOS: `com.anthropic.claudecode` 首选项域
+ *   （仅 /Library/Managed Preferences/ 的 MDM 配置文件 - 不可用户写入 ~/Library/Preferences/）
+ * - Windows: `HKLM\SOFTWARE\Policies\ClaudeCode`（仅管理员）和 `HKCU\SOFTWARE\Policies\ClaudeCode`（用户可写入，最低优先级）
+ * - Linux: 无 MDM 等效项（改用 /etc/claude-code/managed-settings.json）
  *
  * Policy settings use "first source wins" — the highest-priority source that exists
  * provides all policy settings. Priority (highest to lowest):

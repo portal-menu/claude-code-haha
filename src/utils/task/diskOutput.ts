@@ -14,10 +14,10 @@ import { readFileRange, tailFile } from '../fsOperations.js'
 import { logError } from '../log.js'
 import { getProjectTempDir } from '../permissions/filesystem.js'
 
-// SECURITY: O_NOFOLLOW prevents following symlinks when opening task output files.
-// Without this, an attacker in the sandbox could create symlinks in the tasks directory
-// pointing to arbitrary files, causing Claude Code on the host to write to those files.
-// O_NOFOLLOW is not available on Windows, but the sandbox attack vector is Unix-only.
+// 安全性：O_NOFOLLOW 防止在打开任务输出文件时跟随符号链接。
+// 如果没有此选项，攻击者在沙箱中可以在任务目录中创建指向任意文件的符号链接，
+// 导致主机上的 Open Claude Code 中文汉化版 写入这些文件。
+// O_NOFOLLOW 在 Windows 上不可用，但沙箱攻击向量仅限 Unix。
 const O_NOFOLLOW = fsConstants.O_NOFOLLOW ?? 0
 
 const DEFAULT_MAX_READ_BYTES = 8 * 1024 * 1024 // 8MB

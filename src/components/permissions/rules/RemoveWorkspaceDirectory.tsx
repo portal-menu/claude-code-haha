@@ -68,7 +68,7 @@ export function RemoveWorkspaceDirectory(t0) {
   }
   let t4;
   if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
-    t4 = <Text>Claude Code will no longer have access to files in this directory.</Text>;
+    t4 = <Text>Open Claude Code 中文汉化版 将不再有权访问此目录中的文件。</Text>;
     $[10] = t4;
   } else {
     t4 = $[10];

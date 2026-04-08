@@ -32,11 +32,11 @@ function isProactiveActive_SAFE_TO_CALL_ANYWHERE(): boolean {
  * 2. Agent system prompt (if mainThreadAgentDefinition is set)
  *    - In proactive mode: agent prompt is APPENDED to default (agent adds domain
  *      instructions on top of the autonomous agent prompt, like teammates do)
- *    - Otherwise: agent prompt REPLACES default
- * 3. Custom system prompt (if specified via --system-prompt)
- * 4. Default system prompt (the standard Claude Code prompt)
+ *    - 否则：代理提示替换默认提示
+ * 3. 自定义系统提示（如果通过 --system-prompt 指定）
+ * 4. 默认系统提示（标准 Open Claude Code 中文汉化版 提示）
  *
- * Plus appendSystemPrompt is always added at the end if specified (except when override is set).
+ * 除非设置了 override，否则 appendSystemPrompt 始终在末尾添加。
  */
 export function buildEffectiveSystemPrompt({
   mainThreadAgentDefinition,

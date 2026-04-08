@@ -44,7 +44,7 @@ type Props = {
 export function formatToolUseSummary(name: string, input: unknown): string {
   // plan_ready phase is only reached via ExitPlanMode tool
   if (name === EXIT_PLAN_MODE_V2_TOOL_NAME) {
-    return 'Review the plan in Claude Code on the web';
+    return '在网页上查看计划 - Open Claude Code 中文汉化版';
   }
   if (!input || typeof input !== 'object') return name;
   // AskUserQuestion: show the question text as a CTA, not the tool name.
@@ -168,7 +168,7 @@ function UltraplanSessionDetail(t0) {
     }
     let t7;
     if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
-      t7 = <Text dimColor={true}>This will terminate the Claude Code on the web session.</Text>;
+      t7 = <Text dimColor={true}>这将终止网页上的 Open Claude Code 中文汉化版 会话。</Text>;
       $[12] = t7;
     } else {
       t7 = $[12];
@@ -311,7 +311,7 @@ function UltraplanSessionDetail(t0) {
   let t19;
   if ($[47] === Symbol.for("react.memo_cache_sentinel")) {
     t19 = {
-      label: "Review in Claude Code on the web",
+      label: "在网页上查看 - Open Claude Code 中文汉化版",
       value: "open" as const
     };
     $[47] = t19;
@@ -595,13 +595,13 @@ function ReviewSessionDetail(t0) {
   let t3;
   if ($[11] !== completed || $[12] !== onKill || $[13] !== running) {
     t3 = completed ? [{
-      label: "Open in Claude Code on the web",
+      label: "在网页上打开 - Open Claude Code 中文汉化版",
       value: "open"
     }, {
-      label: "Dismiss",
+      label: "关闭",
       value: "dismiss"
     }] : [{
-      label: "Open in Claude Code on the web",
+      label: "在网页上打开 - Open Claude Code 中文汉化版",
       value: "open"
     }, ...(onKill && running ? [{
       label: "Stop ultrareview",

@@ -38,9 +38,9 @@ const FILE_STABILITY_THRESHOLD_MS = 1000
 const FILE_STABILITY_POLL_INTERVAL_MS = 500
 
 /**
- * Time window in milliseconds to consider a file change as internal.
- * If a file change occurs within this window after markInternalWrite() is called,
- * it's assumed to be from Claude Code itself and won't trigger a notification.
+ * 毫秒时间窗口，用于将文件更改视为内部更改。
+ * 如果在调用 markInternalWrite() 后此窗口内发生文件更改，
+ * 则假定来自 Open Claude Code 中文汉化版 本身，不会触发通知。
  */
 const INTERNAL_WRITE_WINDOW_MS = 5000
 

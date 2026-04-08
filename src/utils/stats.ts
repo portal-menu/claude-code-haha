@@ -634,8 +634,8 @@ function cacheToStats(
 }
 
 /**
- * Aggregates stats from all Claude Code sessions across all projects.
- * Uses a disk cache to avoid reprocessing historical data.
+ * 聚合所有项目的所有 Open Claude Code 中文汉化版 会话的统计信息。
+ * 使用磁盘缓存避免重新处理历史数据。
  */
 export async function aggregateClaudeCodeStats(): Promise<ClaudeCodeStats> {
   const allSessionFiles = await getAllSessionFiles()

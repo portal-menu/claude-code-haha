@@ -63,7 +63,7 @@ export const PermissionsSchema = lazySchema(() =>
             : EXTERNAL_PERMISSION_MODES,
         )
         .optional()
-        .describe('Default permission mode when Claude Code needs access'),
+        .describe('Open Claude Code 中文汉化版 需要访问时的默认权限模式'),
       disableBypassPermissionsMode: z
         .enum(['disable'])
         .optional()
@@ -258,7 +258,7 @@ export const SettingsSchema = lazySchema(() =>
       $schema: z
         .literal(CLAUDE_CODE_SETTINGS_SCHEMA_URL)
         .optional()
-        .describe('JSON Schema reference for Claude Code settings'),
+        .describe('Open Claude Code 中文汉化版 设置的 JSON Schema 引用'),
       apiKeyHelper: z
         .string()
         .optional()
@@ -291,7 +291,7 @@ export const SettingsSchema = lazySchema(() =>
                   .describe('IdP issuer URL for OIDC discovery'),
                 clientId: z
                   .string()
-                  .describe("Claude Code's client_id registered at the IdP"),
+                  .describe("Open Claude Code 中文汉化版 在 IdP 注册的 client_id"),
                 callbackPort: z
                   .number()
                   .int()
@@ -332,7 +332,7 @@ export const SettingsSchema = lazySchema(() =>
         ),
       env: EnvironmentVariablesSchema()
         .optional()
-        .describe('Environment variables to set for Claude Code sessions'),
+        .describe('为 Open Claude Code 中文汉化版 会话设置的环境变量'),
       // Attribution for commits and PRs
       attribution: z
         .object({
@@ -353,8 +353,8 @@ export const SettingsSchema = lazySchema(() =>
         })
         .optional()
         .describe(
-          'Customize attribution text for commits and PRs. ' +
-            'Each field defaults to the standard Claude Code attribution if not set.',
+          '自定义提交和 PR 的归属文本。' +
+            '如果未设置，每个字段默认为标准 Open Claude Code 中文汉化版 归属。',
         ),
       includeCoAuthoredBy: z
         .boolean()
@@ -375,7 +375,7 @@ export const SettingsSchema = lazySchema(() =>
       model: z
         .string()
         .optional()
-        .describe('Override the default model used by Claude Code'),
+        .describe('覆盖 Open Claude Code 中文汉化版 使用的默认模型'),
       // Enterprise allowlist of models
       availableModels: z
         .array(z.string())

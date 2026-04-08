@@ -18,10 +18,10 @@ export function createRecentActivityFeed(activities: LogOption[]): FeedConfig {
     };
   });
   return {
-    title: 'Recent activity',
+    title: '最近活动',
     lines,
     footer: lines.length > 0 ? '/resume for more' : undefined,
-    emptyMessage: 'No recent activity'
+    emptyMessage: '暂无最近活动'
   };
 }
 export function createWhatsNewFeed(releaseNotes: string[]): FeedConfig {
@@ -39,11 +39,11 @@ export function createWhatsNewFeed(releaseNotes: string[]): FeedConfig {
       text: note
     };
   });
-  const emptyMessage = "external" === 'ant' ? 'Unable to fetch latest claude-cli-internal commits' : 'Check the Claude Code changelog for updates';
+  const emptyMessage = "external" === 'ant' ? '无法获取最新的 claude-cli-internal 提交' : '查看 Open Claude Code 中文汉化版 的更新日志以获取更新';
   return {
-    title: "external" === 'ant' ? "What's new [ANT-ONLY: Latest CC commits]" : "What's new",
+    title: "external" === 'ant' ? "最新动态 [ANT-ONLY: 最新 CC 提交]" : "最新动态",
     lines,
-    footer: lines.length > 0 ? '/release-notes for more' : undefined,
+    footer: lines.length > 0 ? '/release-notes 了解更多信息' : undefined,
     emptyMessage
   };
 }
@@ -67,15 +67,15 @@ export function createProjectOnboardingFeed(steps: Step[]): FeedConfig {
     });
   }
   return {
-    title: 'Tips for getting started',
+    title: '入门技巧',
     lines
   };
 }
 export function createGuestPassesFeed(): FeedConfig {
   const reward = getCachedReferrerReward();
-  const subtitle = reward ? `Share Claude Code and earn ${formatCreditAmount(reward)} of extra usage` : 'Share Claude Code with friends';
+  const subtitle = reward ? `分享 Open Claude Code 中文汉化版 并赚取 ${formatCreditAmount(reward)} 额外使用量` : '与朋友分享 Open Claude Code 中文汉化版';
   return {
-    title: '3 guest passes',
+    title: '3 张访客通行证',
     lines: [],
     customContent: {
       content: <>

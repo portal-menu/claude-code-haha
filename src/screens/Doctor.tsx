@@ -222,7 +222,7 @@ export function Doctor(t0) {
   let t7;
   if ($[11] !== onDone) {
     t7 = () => {
-      onDone("Claude Code diagnostics dismissed", {
+      onDone("Open Claude Code 中文汉化版 诊断已关闭", {
         display: "system"
       });
     };

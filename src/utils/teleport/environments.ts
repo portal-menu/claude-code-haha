@@ -33,7 +33,7 @@ export async function fetchEnvironments(): Promise<EnvironmentResource[]> {
   const accessToken = getClaudeAIOAuthTokens()?.accessToken
   if (!accessToken) {
     throw new Error(
-      'Claude Code web sessions require authentication with a Claude.ai account. API key authentication is not sufficient. Please run /login to authenticate, or check your authentication status with /status.',
+      'Open Claude Code 中文汉化版 网页会话需要使用 Claude.ai 账户进行身份验证。API 密钥身份验证不足。请运行 /login 进行身份验证，或使用 /status 检查您的身份验证状态。',
     )
   }
 

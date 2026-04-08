@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /e/Program Files/claude-code-haha)",
+      "Bash(npm install:*)",
+      "Bash(bun install:*)",
+      "Bash(npm --version)",
+      "Bash(mkdir:*)",
+      "Bash(powershell -Command \"\n\\\\$png1x1 = [byte[]]@\\(0x89,0x50,0x4E,0x47,0x0D,0x0A,0x1A,0x0A,0x00,0x00,0x00,0x0D,0x49,0x48,0x44,0x52,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x01,0x08,0x06,0x00,0x00,0x00,0x1F,0x15,0xC4,0x89,0x00,0x00,0x00,0x0A,0x49,0x44,0x41,0x54,0x78,0x9C,0x63,0x00,0x01,0x00,0x00,0x05,0x00,0x01,0x0D,0x0A,0x2D,0xB4,0x00,0x00,0x00,0x00,0x49,0x45,0x4E,0x44,0xAE,0x42,0x60,0x82\\)\n[System.IO.File]::WriteAllBytes\\('video-extractor/images/tab_home.png', \\\\$png1x1\\)\n[System.IO.File]::WriteAllBytes\\('video-extractor/images/tab_home_active.png', \\\\$png1x1\\)\n[System.IO.File]::WriteAllBytes\\('video-extractor/images/tab_mine.png', \\\\$png1x1\\)\n[System.IO.File]::WriteAllBytes\\('video-extractor/images/tab_mine_active.png', \\\\$png1x1\\)\nWrite-Host 'Created tab icons'\n\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"E:\\\\Program Files\\\\claude-code-haha\\\\video-extractor\\\\images\\\\create-icons.ps1\" 2>&1)",
+      "Bash(grep -r portal-menu --include=*)",
+      "Bash(cmd /c \"cd /d E:\\\\Program Files\\\\claude-code-haha\\\\video-extractor\\\\server && npm install\")",
+      "Bash(where render:*)",
+      "Bash(cmd /c \"npm install -g @render/cli 2>&1\")",
+      "Bash(cmd /c \"npm install -g render-cli 2>&1\")",
+      "Bash(cmd /c \"where npm\" 2>&1)",
+      "Read(//c/Program Files/nodejs/**)",
+      "Read(//c/Users/Administrator/AppData/Roaming/npm/**)",
+      "Read(//d/Program Files/nodejs/**)",
+      "Bash(curl -fsSL https://render-cli.githubusercontent.com/install.sh)",
+      "Bash(cmd /c \"curl --version\" 2>&1)",
+      "WebSearch",
+      "Bash(curl -s https://video-extractor-api-production-0ed5.up.railway.app/admin)",
+      "Bash(curl:*)",
+      "Bash(curl -s -X POST https://video-extractor-api-production-0ed5.up.railway.app/api/proxy -H \"Content-Type: application/json\" -d '{\"\"\"\"url\"\"\"\": \"\"\"\"https://v.douyin.com/UraMxEWyY0I/\"\"\"\"}')"
+    ]
+  }
+}

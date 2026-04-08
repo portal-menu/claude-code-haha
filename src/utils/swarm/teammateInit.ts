@@ -1,8 +1,8 @@
 /**
- * Teammate Initialization Module
+ * 队友初始化模块
  *
- * Handles initialization for Claude Code instances running as teammates in a swarm.
- * Registers a Stop hook to notify the team leader when the teammate becomes idle.
+ * 处理作为群组中队友运行的 Open Claude Code 中文汉化版 实例的初始化。
+ * 注册 Stop 钩子，在队友空闲时通知团队领导者。
  */
 
 import type { AppState } from '../../state/AppState.js'

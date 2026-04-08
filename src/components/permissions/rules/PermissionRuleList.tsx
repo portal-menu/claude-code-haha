@@ -388,9 +388,9 @@ function PermissionRulesTab(t0) {
     let t8;
     if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
       t8 = {
-        allow: "Claude Code won't ask before using allowed tools.",
-        ask: "Claude Code will always ask for confirmation before using these tools.",
-        deny: "Claude Code will always reject requests to use denied tools."
+        allow: "Open Claude Code 中文汉化版 在使用允许的工具前不会询问。",
+        ask: "Open Claude Code 中文汉化版 总是在使用这些工具前请求确认。",
+        deny: "Open Claude Code 中文汉化版 总是拒绝使用被拒绝的工具的请求。"
       };
       $[10] = t8;
     } else {
@@ -1098,7 +1098,7 @@ export function PermissionRuleList(t0) {
   }
   let t28;
   if ($[89] === Symbol.for("react.memo_cache_sentinel")) {
-    t28 = <Text>Claude Code can read files in the workspace, and make edits when auto-accept edits is on.</Text>;
+    t28 = <Text>Open Claude Code 中文汉化版 可以读取工作区中的文件，并在自动接受编辑开启时进行编辑。</Text>;
     $[89] = t28;
   } else {
     t28 = $[89];

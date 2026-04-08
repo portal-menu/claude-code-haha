@@ -1,0 +1,13 @@
+#!/usr/bin/env bun
+// 快速测试脚本
+console.log("✅ Bun 环境测试成功！");
+console.log("Node 版本:", process.version);
+console.log("Bun 版本:", Bun.version);
+console.log("当前目录:", process.cwd());
+console.log("\n项目已安装完成！");
+console.log("\n下一步：");
+console.log("1. 编辑 .env 文件，填入你的 ANTHROPIC_AUTH_TOKEN");
+console.log("2. 运行以下命令启动完整 TUI:");
+console.log("   bun --env-file=.env ./src/entrypoints/cli.tsx");
+console.log("\n或使用无头模式:");
+console.log("   bun --env-file=.env ./src/entrypoints/cli.tsx -p \"你的问题\"");

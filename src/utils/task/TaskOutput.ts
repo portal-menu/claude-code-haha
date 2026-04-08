@@ -321,7 +321,7 @@ export class TaskOutput {
       logForDebugging(
         `TaskOutput.#readStdoutFromFile: failed to read ${this.path} (${code}): ${err}`,
       )
-      return `<bash output unavailable: output file ${this.path} could not be read (${code}). This usually means another Claude Code process in the same project deleted it during startup cleanup.>`
+      return `<bash output unavailable: output file ${this.path} could not be read (${code}). 这通常意味着同一项目中的另一个 Open Claude Code 中文汉化版 进程在启动清理期间删除了它。>`
     }
   }
 

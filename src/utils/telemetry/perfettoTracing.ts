@@ -1,25 +1,25 @@
 /**
- * Perfetto Tracing for Claude Code (Ant-only)
+ * Open Claude Code 中文汉化版 的 Perfetto 跟踪（仅限 Ant）
  *
- * This module generates traces in the Chrome Trace Event format that can be
- * viewed in ui.perfetto.dev or Chrome's chrome://tracing.
+ * 该模块生成 Chrome 跟踪事件格式的跟踪，可以在
+ * ui.perfetto.dev 或 Chrome 的 chrome://tracing 中查看。
  *
- * NOTE: This feature is ant-only and eliminated from external builds.
+ * 注意：此功能仅限 Ant 内部使用，在外部构建中被移除。
  *
- * The trace file includes:
- * - Agent hierarchy (parent-child relationships in a swarm)
+ * 跟踪文件包括：
+ * - 代理层次结构（群组中的父子关系）
  * - API requests with TTFT, TTLT, prompt length, cache stats, msg ID, speculative flag
  * - Tool executions with name, duration, and token usage
  * - User input waiting time
  *
  * Usage:
  * 1. Enable via CLAUDE_CODE_PERFETTO_TRACE=1 or CLAUDE_CODE_PERFETTO_TRACE=<path>
- * 2. Optionally set CLAUDE_CODE_PERFETTO_WRITE_INTERVAL_S=<positive integer> to write the
- *    trace file periodically (default: write only on exit).
- * 3. Run Claude Code normally
- * 4. Trace file is written to ~/.claude/traces/trace-<session-id>.json
- *    or to the specified path
- * 5. Open in ui.perfetto.dev to visualize
+ * 2. 可选地设置 CLAUDE_CODE_PERFETTO_WRITE_INTERVAL_S=<正整数> 以定期写入跟踪
+ *    文件（默认：仅在退出时写入）。
+ * 3. 正常运行 Open Claude Code 中文汉化版
+ * 4. 跟踪文件写入 ~/.claude/traces/trace-<session-id>.json
+ *    或指定的路径
+ * 5. 在 ui.perfetto.dev 中打开以可视化
  */
 
 import { feature } from 'bun:bundle'

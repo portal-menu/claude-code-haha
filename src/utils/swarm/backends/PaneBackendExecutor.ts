@@ -110,7 +110,7 @@ export class PaneBackendExecutor implements TeammateExecutor {
         await this.backend.enablePaneBorderStatus()
       }
 
-      // Build the command to spawn Claude Code with teammate identity
+      // 构建生成 Open Claude Code 中文汉化版 的命令，带有队友身份
       const binaryPath = getTeammateCommand()
 
       // Build teammate identity CLI args

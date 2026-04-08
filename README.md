@@ -1,10 +1,10 @@
-# Claude Code Haha
+# Open Claude Code 中文汉化版
 
 <p align="right"><strong>中文</strong> | <a href="./README.en.md">English</a></p>
 
 基于 Claude Code 泄露源码修复的**本地可运行版本**，支持接入任意 Anthropic 兼容 API（如 MiniMax、OpenRouter 等）。
 
-> 原始泄露源码无法直接运行。本仓库修复了启动链路中的多个阻塞问题，使完整的 Ink TUI 交互界面可以在本地工作。
+> **Open Claude Code 中文汉化版** - 原始泄露源码无法直接运行。本仓库修复了启动链路中的多个阻塞问题，使完整的 Ink TUI 交互界面可以在本地工作，并已完全中文化。
 
 <p align="center">
   <img src="docs/00runtime.png" alt="运行截图" width="800">

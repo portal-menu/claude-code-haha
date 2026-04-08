@@ -1132,7 +1132,7 @@ export function REPL({
   // session from mid-conversation context.
   const haikuTitleAttemptedRef = useRef((initialMessages?.length ?? 0) > 0);
   const agentTitle = mainThreadAgentDefinition?.agentType;
-  const terminalTitle = sessionTitle ?? agentTitle ?? haikuTitle ?? 'Claude Code';
+  const terminalTitle = sessionTitle ?? agentTitle ?? haikuTitle ?? 'Open Claude Code 中文汉化版';
   const isWaitingForApproval = toolUseConfirmQueue.length > 0 || promptQueue.length > 0 || pendingWorkerRequest || pendingSandboxRequest;
   // Local-jsx commands (like /plugin, /config) show user-facing dialogs that
   // wait for input. Require jsx != null — if the flag is stuck true but jsx
@@ -2678,9 +2678,8 @@ export function REPL({
     // via ref (was tengu_birch_mist experiment: first-message-only to save
     // Haiku calls). The ref replaces the old `messages.length <= 1` check,
     // which was broken by SessionStart hook messages (prepended via
-    // useDeferredHookMessages) and attachment messages (appended by
-    // processTextPrompt) — both pushed length past 1 on turn one, so the
-    // title silently fell through to the "Claude Code" default.
+    // useDeferredHookMessages) 和附件消息（由 processTextPrompt 追加）—
+    // 两者在第一轮都推长了长度超过 1，因此标题无声地回退到 "Open Claude Code 中文汉化版" 默认值。
     if (!titleDisabled && !sessionTitle && !agentTitle && !haikuTitleAttemptedRef.current) {
       const firstUserMessage = newMessages.find(m => m.type === 'user' && !m.isMeta);
       const text = firstUserMessage?.type === 'user' ? getContentText(firstUserMessage.message.content) : null;
@@ -4123,7 +4122,7 @@ export function REPL({
   useEffect(() => {
     const handleSuspend = () => {
       // Print suspension instructions
-      process.stdout.write(`\nClaude Code has been suspended. Run \`fg\` to bring Claude Code back.\nNote: ctrl + z now suspends Claude Code, ctrl + _ undoes input.\n`);
+      process.stdout.write(`\nOpen Claude Code 中文汉化版 已暂停。运行 \`fg\` 恢复 Open Claude Code 中文汉化版。\n注意：ctrl + z 现在暂停 Open Claude Code 中文汉化版，ctrl + _ 撤销输入。\n`);
     };
     const handleResume = () => {
       // Force complete component tree replacement instead of terminal clear

@@ -59,11 +59,11 @@ export function Onboarding({
 
   // Define all onboarding steps
   const themeStep = <Box marginX={1}>
-      <ThemePicker onThemeSelect={handleThemeSelection} showIntroText={true} helpText="To change this later, run /theme" hideEscToCancel={true} skipExitHandling={true} // Skip exit handling as Onboarding already handles it
+      <ThemePicker onThemeSelect={handleThemeSelection} showIntroText={true} helpText="若要稍后更改此设置，请运行 /theme" hideEscToCancel={true} skipExitHandling={true} // Skip exit handling as Onboarding already handles it
     />
     </Box>;
   const securityStep = <Box flexDirection="column" gap={1} paddingLeft={1}>
-      <Text bold>Security notes:</Text>
+      <Text bold>安全提示：</Text>
       <Box flexDirection="column" width={70}>
         {/**
          * OrderedList misnumbers items when rendering conditionally,
@@ -71,20 +71,20 @@ export function Onboarding({
          */}
         <OrderedList>
           <OrderedList.Item>
-            <Text>Claude can make mistakes</Text>
+            <Text>Claude 可能会犯错</Text>
             <Text dimColor wrap="wrap">
-              You should always review Claude&apos;s responses, especially when
+              你应该始终检查 Claude 的回答，尤其是当
               <Newline />
-              running code.
+              运行代码时。
               <Newline />
             </Text>
           </OrderedList.Item>
           <OrderedList.Item>
             <Text>
-              Due to prompt injection risks, only use it with code you trust
+              由于提示注入风险，仅与你信任的代码一起使用
             </Text>
             <Text dimColor wrap="wrap">
-              For more details see:
+              查看更多详情：
               <Newline />
               <Link url="https://code.claude.com/docs/en/security" />
             </Text>
@@ -96,9 +96,9 @@ export function Onboarding({
   const preflightStep = <PreflightStep onSuccess={goToNextStep} />;
   // Create the steps array - determine which steps to include based on reAuth and oauthEnabled
   const apiKeyNeedingApproval = useMemo(() => {
-    // Add API key step if needed
-    // On homespace, ANTHROPIC_API_KEY is preserved in process.env for child
-    // processes but ignored by Claude Code itself (see auth.ts).
+    // 添加 API 密钥步骤（如果需要）
+    // 在 homespace 上，ANTHROPIC_API_KEY 在 process.env 中保留供子进程使用
+    // 但被 Open Claude Code 中文汉化版 本身忽略（见 auth.ts）。
     if (!process.env.ANTHROPIC_API_KEY || isRunningOnHomespace()) {
       return '';
     }
@@ -146,7 +146,7 @@ export function Onboarding({
     steps.push({
       id: 'terminal-setup',
       component: <Box flexDirection="column" gap={1} paddingLeft={1}>
-          <Text bold>Use Claude Code&apos;s terminal setup?</Text>
+          <Text bold>使用 Open Claude Code 中文汉化版 的终端设置？</Text>
           <Box flexDirection="column" width={70} gap={1}>
             <Text>
               For the optimal coding experience, enable the recommended settings

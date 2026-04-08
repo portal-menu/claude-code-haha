@@ -8,14 +8,14 @@
 import { homedir, userInfo } from 'os'
 import { join } from 'path'
 
-/** macOS preference domain for Claude Code MDM profiles. */
+/** Open Claude Code 中文汉化版 MDM 配置文件的 macOS 首选项域。 */
 export const MACOS_PREFERENCE_DOMAIN = 'com.anthropic.claudecode'
 
 /**
- * Windows registry key paths for Claude Code MDM policies.
+ * Open Claude Code 中文汉化版 MDM 策略的 Windows 注册表键路径。
  *
- * These keys live under SOFTWARE\Policies which is on the WOW64 shared key
- * list — both 32-bit and 64-bit processes see the same values without
+ * 这些键位于 SOFTWARE\Policies 下，位于 WOW64 共享键列表中 -
+ * 32 位和 64 位进程看到相同的值，无需
  * redirection. Do not move these to SOFTWARE\ClaudeCode, as SOFTWARE is
  * redirected and 32-bit processes would silently read from WOW6432Node.
  * See: https://learn.microsoft.com/en-us/windows/win32/winprog64/shared-registry-keys

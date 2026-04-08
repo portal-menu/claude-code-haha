@@ -1,13 +1,13 @@
 /**
- * Session Tracing for Claude Code using OpenTelemetry (BETA)
+ * 使用 OpenTelemetry 的 Open Claude Code 中文汉化版 会话跟踪（BETA）
  *
- * This module provides a high-level API for creating and managing spans
- * to trace Claude Code workflows. Each user interaction creates a root
- * interaction span, which contains operation spans (LLM requests, tool calls, etc.).
+ * 该模块提供了用于创建和管理跨度的高级 API，
+ * 以跟踪 Open Claude Code 中文汉化版 工作流。每个用户交互创建一个根
+ * 交互跨度，其中包含操作跨度（LLM 请求、工具调用等）。
  *
- * Requirements:
- * - Enhanced telemetry is enabled via feature('ENHANCED_TELEMETRY_BETA')
- * - Configure OTEL_TRACES_EXPORTER (console, otlp, etc.)
+ * 要求：
+ * - 通过 feature('ENHANCED_TELEMETRY_BETA') 启用增强遥测
+ * - 配置 OTEL_TRACES_EXPORTER（console、otlp 等）
  */
 
 import { feature } from 'bun:bundle'

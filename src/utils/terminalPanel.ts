@@ -6,13 +6,12 @@
  * Code instance gets its own isolated terminal panel that persists within the
  * session but is destroyed when the instance exits.
  *
- * Meta+J is bound to detach-client inside tmux, so pressing it returns to
- * Claude Code while the shell keeps running. Next toggle re-attaches to the
- * same session.
+ * Meta+J 在 tmux 中绑定为 detach-client，因此按它会返回到
+ * Open Claude Code 中文汉化版，而 shell 继续运行。下次切换会重新附加到同一会话。
  *
- * When tmux is not available, falls back to a non-persistent shell via spawnSync.
+ * 当 tmux 不可用时，通过 spawnSync 回退到非持久性 shell。
  *
- * Uses the same suspend-Ink pattern as the external editor (promptEditor.ts).
+ * 使用与外部编辑器（promptEditor.ts）相同的 suspend-Ink 模式。
  */
 
 import { spawn, spawnSync } from 'child_process'
@@ -25,9 +24,9 @@ import { logForDebugging } from './debug.js'
 const TMUX_SESSION = 'panel'
 
 /**
- * Get the tmux socket name for the terminal panel.
- * Uses a unique socket per Claude Code instance (based on session ID)
- * so that each instance has its own isolated terminal panel.
+ * 获取终端面板的 tmux 套接字名称。
+ * 每个 Open Claude Code 中文汉化版 实例使用唯一的套接字（基于会话 ID），
+ * 以便每个实例都有其自己的隔离终端面板。
  */
 export function getTerminalPanelSocket(): string {
   // Use first 8 chars of session UUID for uniqueness while keeping name short
@@ -109,9 +108,8 @@ class TerminalPanel {
       return false
     }
 
-    // Bind Meta+J (toggles back to Claude Code from inside the terminal)
-    // and configure the status bar hint. Chained with ';' to collapse
-    // 5 spawnSync calls into 1.
+    // 绑定 Meta+J（从终端内部切换回 Open Claude Code 中文汉化版）
+    // 并配置状态栏提示。用 ';' 链接以将 5 个 spawnSync 调用合并为 1。
     // biome-ignore format: one tmux command per line
     spawnSync('tmux', [
       '-L', socket,

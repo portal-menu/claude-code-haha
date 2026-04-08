@@ -40,7 +40,7 @@ function PermissionDescription() {
   const $ = _c(1);
   let t0;
   if ($[0] === Symbol.for("react.memo_cache_sentinel")) {
-    t0 = <Text dimColor={true}>Claude Code will be able to read files in this directory and make edits when auto-accept edits is on.</Text>;
+    t0 = <Text dimColor={true}>Open Claude Code 中文汉化版 将能够读取此目录中的文件并在自动接受编辑开启时进行编辑。</Text>;
     $[0] = t0;
   } else {
     t0 = $[0];

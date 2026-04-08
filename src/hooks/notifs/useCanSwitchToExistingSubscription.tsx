@@ -30,7 +30,7 @@ async function _temp2() {
   logEvent("tengu_switch_to_subscription_notice_shown", {});
   return {
     key: "switch-to-subscription",
-    jsx: <Text color="suggestion">Use your existing Claude {subscriptionType} plan with Claude Code<Text color="text" dimColor={true}>{" "}· /login to activate</Text></Text>,
+    jsx: <Text color="suggestion">使用您现有的 Claude {subscriptionType} 计划与 Open Claude Code 中文汉化版<Text color="text" dimColor={true}>{" "}· /login 激活</Text></Text>,
     priority: "low"
   };
 }

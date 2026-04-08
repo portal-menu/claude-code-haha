@@ -1,14 +1,13 @@
 /**
- * Undercover mode — safety utilities for contributing to public/open-source repos.
+ * 隐形模式 — 为公共/开源仓库贡献的安全工具。
  *
- * When active, Claude Code adds safety instructions to commit/PR prompts and
- * strips all attribution to avoid leaking internal model codenames, project
- * names, or other Anthropic-internal information. The model is not told what
- * model it is.
+ * 激活时，Open Claude Code 中文汉化版 会向提交/PR 提示添加安全说明，
+ * 并删除所有归属信息以避免泄露内部模型代号、项目名称或其他
+ * Anthropic 内部信息。模型不会被告知它是什么模型。
  *
- * Activation:
- *   - CLAUDE_CODE_UNDERCOVER=1 — force ON (even in internal repos)
- *   - Otherwise AUTO: active UNLESS the repo remote matches the internal
+ * 激活方式：
+ *   - CLAUDE_CODE_UNDERCOVER=1 — 强制开启（即使在内部仓库中）
+ *   - 否则 AUTO：除非仓库远程匹配内部
  *     allowlist (INTERNAL_MODEL_REPOS in commitAttribution.ts). Safe default
  *     is ON — Claude may push to public remotes from a CWD that isn't itself
  *     a git checkout (e.g. /tmp crash repro).
@@ -47,11 +46,11 @@ information. Do not blow your cover.
 NEVER include in commit messages or PR descriptions:
 - Internal model codenames (animal names like Capybara, Tengu, etc.)
 - Unreleased model version numbers (e.g., opus-4-7, sonnet-4-8)
-- Internal repo or project names (e.g., claude-cli-internal, anthropics/…)
-- Internal tooling, Slack channels, or short links (e.g., go/cc, #claude-code-…)
-- The phrase "Claude Code" or any mention that you are an AI
-- Any hint of what model or version you are
-- Co-Authored-By lines or any other attribution
+- 内部仓库或项目名称（例如 claude-cli-internal, anthropics/…）
+- 内部工具、Slack 频道或短链接（例如 go/cc, #claude-code-…）
+- "Open Claude Code 中文汉化版" 或任何提及您是 AI 的内容
+- 您是什么模型或版本的任何提示
+- Co-Authored-By 行或任何其他归属
 
 Write commit messages as a human developer would — describe only what the code
 change does.
@@ -64,7 +63,7 @@ GOOD:
 BAD (never write these):
 - "Fix bug found while testing with Claude Capybara"
 - "1-shotted by claude-opus-4-6"
-- "Generated with Claude Code"
+- "Generated with Open Claude Code 中文汉化版"
 - "Co-Authored-By: Claude Opus 4.6 <…>"
 `
   }

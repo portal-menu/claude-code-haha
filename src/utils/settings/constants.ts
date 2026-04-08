@@ -195,8 +195,8 @@ export const SOURCES = [
 ] as const satisfies readonly EditableSettingSource[]
 
 /**
- * The JSON Schema URL for Claude Code settings
- * You can edit the contents at https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/claude-code-settings.json
+ * Open Claude Code 中文汉化版 设置的 JSON Schema URL
+ * 您可以在 https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/claude-code-settings.json 编辑内容
  */
 export const CLAUDE_CODE_SETTINGS_SCHEMA_URL =
   'https://json.schemastore.org/claude-code-settings.json'

@@ -36,7 +36,7 @@ export function validateInputForSettingsFileEdit(
   if (!afterValidation.isValid) {
     return {
       result: false,
-      message: `Claude Code settings.json validation failed after edit:\n${afterValidation.error}\n\nFull schema:\n${afterValidation.fullSchema}\nIMPORTANT: Do not update the env unless explicitly instructed to do so.`,
+      message: `Open Claude Code 中文汉化版 settings.json 编辑后验证失败：\n${afterValidation.error}\n\n完整模式：\n${afterValidation.fullSchema}\n重要提示：除非明确指示，否则不要更新环境变量。`,
       errorCode: 10,
     }
   }
